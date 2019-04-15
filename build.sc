@@ -3,6 +3,7 @@ import mill.api.Loose
 import mill.define.Target
 import mill.scalajslib.ScalaJSModule
 import mill.scalalib._
+import mill.scalalib.api.CompilationResult
 
 //noinspection ScalaFileName
 object webApp extends JavaModule {
@@ -23,6 +24,11 @@ object webApp extends JavaModule {
       ivy"com.lihaoyi::cask:0.1.9",
       ivy"com.lihaoyi::scalatags:0.6.7",
     )
+
+    override def compile: T[CompilationResult] = T {
+      frontend.fastOpt.apply()
+      super.compile.apply()
+    }
   }
 
   object shared extends MyScalaModule {
