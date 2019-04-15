@@ -5,8 +5,12 @@ To serve pages from backend cask is used.
 
 ### Useful commands
 
-First you need to compile your ScalaJS to JS:
-$ mill webApp.frontend.fastOpt
+#### How to run it
 
 To continuously run the server and recompile it on changes:
+```shell
 $ mill --watch webApp.backend.runBackground
+```
+#### How to access it
+
+Open http://localhost:8080/ in your browser.
