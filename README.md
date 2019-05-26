@@ -1,7 +1,7 @@
 # ScalaJS-Mill-WebApp
 
-An example of scala.js app build using Mill build tool.
-To serve pages from backend cask is used.
+An example of scala.js app build using Mill build tool.  
+[Cask](http://www.lihaoyi.com/cask/) is used to serve pages from backend (server).
 
 ### Useful commands
 
