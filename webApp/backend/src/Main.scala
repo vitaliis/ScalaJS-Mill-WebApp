@@ -6,7 +6,7 @@ object Main extends cask.MainRoutes {
 
   @cask.get("/")
   def hello() = cask.Response(
-    raw("<!DOCTYPE html>").render + html(
+   "<!doctype html>" + "\n" + html(lang := "en",
       head(
         tag("title")("Hello from ScalaJS"),
         script(src := "/files/webApp/frontend/fastOpt/dest/out.js")
