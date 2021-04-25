@@ -5,7 +5,7 @@ import mill.scalajslib.ScalaJSModule
 import mill.scalalib._
 import mill.scalalib.api.CompilationResult
 
-val projectScalaVersion = "3.0.0-RC2"
+val projectScalaVersion = "2.13.5"
 
 //noinspection ScalaFileName
 object webApp extends JavaModule {
@@ -16,7 +16,7 @@ object webApp extends JavaModule {
     override def scalaJSVersion = "1.5.1"
 
     override def ivyDeps: Target[Loose.Agg[Dep]] = super.ivyDeps() ++ Agg(
-      ivy"org.scala-js::scalajs-dom::1.1.0".withDottyCompat(projectScalaVersion)
+      ivy"org.scala-js::scalajs-dom::1.1.0"
     )
 
   }
@@ -27,7 +27,7 @@ object webApp extends JavaModule {
 
     override def ivyDeps: Target[Loose.Agg[Dep]] = super.ivyDeps() ++ Agg(
       ivy"com.lihaoyi::cask:0.7.9",
-      ivy"com.lihaoyi::scalatags:0.9.4".withDottyCompat(projectScalaVersion)
+      ivy"com.lihaoyi::scalatags:0.9.4"
     )
 
     override def compile: T[CompilationResult] = T {

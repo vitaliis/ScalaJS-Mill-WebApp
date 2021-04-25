@@ -1,3 +1,5 @@
+package app
+
 import scalatags.Text.all._
 
 object Main extends cask.MainRoutes {
