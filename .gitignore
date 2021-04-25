@@ -1,6 +1,5 @@
 out/
 .idea*
-*.iml
 .bloop/
 .metals/
 .vscode/
