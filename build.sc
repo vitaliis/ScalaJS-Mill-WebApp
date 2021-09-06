@@ -5,7 +5,7 @@ import mill.scalajslib.ScalaJSModule
 import mill.scalalib._
 import mill.scalalib.api.CompilationResult
 
-val projectScalaVersion = "3.0.0-RC2"
+val projectScalaVersion = "3.0.0"
 
 //noinspection ScalaFileName
 object webApp extends JavaModule {
@@ -26,7 +26,7 @@ object webApp extends JavaModule {
     override def scalaVersion = projectScalaVersion
 
     override def ivyDeps: Target[Loose.Agg[Dep]] = super.ivyDeps() ++ Agg(
-      ivy"com.lihaoyi::cask:0.7.9",
+      ivy"com.lihaoyi::cask:0.7.11",
       ivy"com.lihaoyi::scalatags:0.9.4".withDottyCompat(projectScalaVersion)
     )
 
